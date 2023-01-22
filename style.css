@@ -26,25 +26,27 @@ section {
     flex-wrap: wrap;
     overflow: hidden;
 }
-section::before{
+
+section::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#000,#0f0,#000);
+    background: linear-gradient(#000, darkviolet, #000);
     animation: animate 5s linear infinite;
 }
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         transform: translateY(-100%);
     }
-    100%{
+
+    100% {
         transform: translateY(100%);
     }
 }
 
-section span{
+section span {
     position: relative;
     display: block;
     width: calc(6.25vw - 2px);
@@ -54,10 +56,11 @@ section span{
     transition: 1.5s;
 }
 
-section span:hover{
-    background: #0f0;
+section span:hover {
+    background:darkviolet;
     transition: 0s;
 }
+
 section .container {
     position: absolute;
     width: 400px;
@@ -83,7 +86,7 @@ section .container .content {
 
 section .container .content h2 {
     font-size: 2em;
-    color: #0f0;
+    color: darkviolet;
     text-transform: uppercase;
     font-style: italic;
     text-shadow: 1px 1px 4px #000;
@@ -124,31 +127,71 @@ section .container .content .form .inputBox i {
     pointer-events: none;
 }
 
-.container .content .form .inputBox input:focus~i ,
+.container .content .form .inputBox input:focus~i,
 .container .content .form .inputBox input:valid~i {
     transform: translateY(-8px);
     font-size: 0.8em;
-    color:#aaa;
+    color: rgb(222, 218, 218);
 }
 
-.container .content .form .inputBox input[type="submit"]{
+.container .content .form .inputBox input[type="submit"] {
     padding: 10px;
-    background: #0f0;
-    color: #111;
+  background: darkorchid;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.25em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 900px){
-    section span{
+.button {
+  
+  border-radius: 100px;
+  box-shadow: rgba(187, 44, 185, 0.2) 0 -25px 18px -14px inset,rgba(187, 44, 185, 0.15) 0 1px 2px,rgba(187, 44, 151, 0.15) 0 2px 4px,rgba(187, 44, 180, 0.15) 0 4px 8px,rgba(187, 44, 185, 0.15) 0 8px 16px,rgba(187, 44, 161, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  box-shadow: rgba(187, 44, 177, 0.35) 0 -25px 18px -14px inset,rgba(187, 44, 163, 0.25) 0 1px 2px,rgba(187, 44, 173, 0.25) 0 2px 4px,rgba(187, 44, 173, 0.25) 0 4px 8px,rgba(187, 44, 182, 0.25) 0 8px 16px,rgba(187, 44, 168, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+@media (max-width: 900px) {
+    section span {
         width: calc(10vw - 2px);
         height: calc(10vw - 2px);
     }
 }
-@media (max-width: 600px){
-    section span{
+
+@media (max-width: 600px) {
+    section span {
         width: calc(20vw - 2px);
         height: calc(20vw - 2px);
+    }
+}
+
+@media (max-width: 320px) {
+    section .container .content {
+        width: 240px;
+    }
+
+    section span {
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
     }
 }
