@@ -57,7 +57,7 @@ section span {
 }
 
 section span:hover {
-    background:darkviolet;
+    background: darkviolet;
     transition: 0s;
 }
 
@@ -92,19 +92,19 @@ section .container .content h2 {
     text-shadow: 1px 1px 4px #000;
 }
 
-section .container .content .form {
+section .container .content form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-section .container .content .form .inputBox {
+section .container .content form .inputBox {
     position: relative;
     width: 100%;
 }
 
-section .container .content .form .inputBox input {
+section .container .content form .inputBox input {
     position: relative;
     width: 100%;
     background: #333;
@@ -117,7 +117,7 @@ section .container .content .form .inputBox input {
     font-size: 1em;
 }
 
-section .container .content .form .inputBox i {
+section .container .content form .inputBox i {
     position: absolute;
     left: 0;
     padding: 15px 10px;
@@ -127,16 +127,16 @@ section .container .content .form .inputBox i {
     pointer-events: none;
 }
 
-.container .content .form .inputBox input:focus~i,
-.container .content .form .inputBox input:valid~i {
+.container .content form .inputBox input:focus~i,
+.container .content form .inputBox input:valid~i {
     transform: translateY(-8px);
     font-size: 0.8em;
     color: rgb(222, 218, 218);
 }
 
-.container .content .form .inputBox input[type="submit"] {
+.container .content form .inputBox input[type="submit"] {
     padding: 10px;
-  background: darkorchid;
+    background: darkorchid;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.25em;
@@ -147,29 +147,33 @@ section .container .content .form .inputBox i {
 }
 
 .button {
-  
-  border-radius: 100px;
-  box-shadow: rgba(187, 44, 185, 0.2) 0 -25px 18px -14px inset,rgba(187, 44, 185, 0.15) 0 1px 2px,rgba(187, 44, 151, 0.15) 0 2px 4px,rgba(187, 44, 180, 0.15) 0 4px 8px,rgba(187, 44, 185, 0.15) 0 8px 16px,rgba(187, 44, 161, 0.15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+
+    border-radius: 100px;
+    box-shadow: rgba(187, 44, 185, 0.2) 0 -25px 18px -14px inset, rgba(187, 44, 185, 0.15) 0 1px 2px, rgba(187, 44, 151, 0.15) 0 2px 4px, rgba(187, 44, 180, 0.15) 0 4px 8px, rgba(187, 44, 185, 0.15) 0 8px 16px, rgba(187, 44, 161, 0.15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .button:hover {
-  box-shadow: rgba(187, 44, 177, 0.35) 0 -25px 18px -14px inset,rgba(187, 44, 163, 0.25) 0 1px 2px,rgba(187, 44, 173, 0.25) 0 2px 4px,rgba(187, 44, 173, 0.25) 0 4px 8px,rgba(187, 44, 182, 0.25) 0 8px 16px,rgba(187, 44, 168, 0.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
+    box-shadow: rgba(187, 44, 177, 0.35) 0 -25px 18px -14px inset, rgba(187, 44, 163, 0.25) 0 1px 2px, rgba(187, 44, 173, 0.25) 0 2px 4px, rgba(187, 44, 173, 0.25) 0 4px 8px, rgba(187, 44, 182, 0.25) 0 8px 16px, rgba(187, 44, 168, 0.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
 }
 
+.error-message {
+    color: red;
+    font-size: 12px;
+}
 
 @media (max-width: 900px) {
     section span {

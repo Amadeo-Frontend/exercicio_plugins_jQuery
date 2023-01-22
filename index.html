@@ -251,37 +251,50 @@
         <div class="container">
             <div class="content">
                 <h2>Cadastro</h2>
-                <div class="form">
+                <form>
                     <div class="inputBox">
-                        <input type="text" required>
+                        <input type="text" id="name" name="name" required>
                         <i>Nome completo</i>
+                        <div class="error-message"></div>
                     </div>
                     <div class="inputBox">
-                        <input type="email" required>
+                        <input type="email" id="email" name="email" required>
                         <i>Email</i>
+                        <div class="error-message"></div>
                     </div>
                     <div class="inputBox">
-                        <input type="tel" required>
+                        <input type="tel" id="phone" name="phone" required>
                         <i>Telefone</i>
+                        <div class="error-message"></div>
                     </div>
                     <div class="inputBox">
-                        <input type="number" required>
+                        <input type="text" id="cpf" name="cpf" required>
                         <i>CPF</i>
+                        <div class="error-message"></div>
                     </div>
                     <div class="inputBox">
-                        <input type="text" required>
-                        <i>Endereço completo</i>
-                    </div>
-                    <div class="inputBox">
-                        <input type="text" required>
+                        <input type="text" id="cep" name="cep" required>
                         <i>CEP</i>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="endereco" name="endereco" required>
+                        <i>Endereço completo</i>
+                        <div class="error-message"></div>
                     </div>
                     <div class="inputBox">
                         <input type="submit" class="button" value="Enviar">
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
+    
 </body>
 </html>
