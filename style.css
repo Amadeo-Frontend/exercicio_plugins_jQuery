@@ -63,13 +63,13 @@ section span:hover {
 
 section .container {
     position: absolute;
-    width: 400px;
+    width: 500px;
     background: #222;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 16px;
     border-radius: 16px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
@@ -81,7 +81,7 @@ section .container .content {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 36px;
+    gap: 24px;
 }
 
 section .container .content h2 {
@@ -110,28 +110,15 @@ section .container .content form .inputBox input {
     background: #333;
     border: none;
     outline: none;
-    padding: 24px 8px 5px;
+    padding: 16px;
     border-radius: 8px;
     color: azure;
     font-weight: 500;
     font-size: 1em;
 }
 
-section .container .content form .inputBox i {
-    position: absolute;
-    left: 0;
-    padding: 15px 10px;
-    font-style: normal;
-    color: #aaa;
-    transition: 0.5s;
-    pointer-events: none;
-}
-
-.container .content form .inputBox input:focus~i,
-.container .content form .inputBox input:valid~i {
-    transform: translateY(-8px);
-    font-size: 0.8em;
-    color: rgb(222, 218, 218);
+label {
+    color: darkmagenta;
 }
 
 .container .content form .inputBox input[type="submit"] {
@@ -170,9 +157,22 @@ section .container .content form .inputBox i {
     transform: scale(1.05) rotate(-1deg);
 }
 
+.originalSpan .container-span {
+    width: 100%;
+
+}
+
 .error-message {
     color: red;
     font-size: 12px;
+    top: 50px;
+}
+
+@media (max-width: 1024px) {
+    section .originalSpan .container-span {
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
 }
 
 @media (max-width: 900px) {

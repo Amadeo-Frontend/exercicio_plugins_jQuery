@@ -55,3 +55,13 @@ $(document).ready(function () {
     }
   });
 });
+
+let originalSpan = document.getElementById("originalSpan");
+let container = document.getElementById("container-span");
+let currentValue = originalSpan.textContent;
+
+for (let i = 0; i < 200; i++) {
+  let newSpan = document.createElement("span");
+  newSpan.textContent = currentValue;
+  container.appendChild(newSpan);
+}
