@@ -63,7 +63,7 @@ section span:hover {
 
 section .container {
     position: absolute;
-    width: 500px;
+    width: 450px;
     background: #222;
     z-index: 1000;
     display: flex;
@@ -96,7 +96,7 @@ section .container .content form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
 }
 
 section .container .content form .inputBox {
@@ -110,7 +110,7 @@ section .container .content form .inputBox input {
     background: #333;
     border: none;
     outline: none;
-    padding: 16px;
+    padding: 10px;
     border-radius: 8px;
     color: azure;
     font-weight: 500;
@@ -157,22 +157,11 @@ label {
     transform: scale(1.05) rotate(-1deg);
 }
 
-.originalSpan .container-span {
-    width: 100%;
 
-}
 
 .error-message {
     color: red;
     font-size: 12px;
-    top: 50px;
-}
-
-@media (max-width: 1024px) {
-    section .originalSpan .container-span {
-        width: calc(20vw - 2px);
-        height: calc(20vw - 2px);
-    }
 }
 
 @media (max-width: 900px) {
