@@ -55,22 +55,3 @@ $(document).ready(function () {
     }
   });
 });
-
-let originalSpan = document.getElementById("originalSpan");
-let container = document.getElementById("container-span");
-let currentValue = originalSpan.textContent;
-
-for (let i = 0; i < 500; i++) {
-  let newSpan = document.createElement("span");
-  newSpan.textContent = currentValue;
-  container.appendChild(newSpan);
-}
-
-let allSpans = document.getElementsByTagName("span");
-for (let i = 0; i < allSpans.length; i++) {
-  allSpans[i].style.position = "absolute";
-  allSpans[i].style.top = "0";
-  allSpans[i].style.left = "0";
-  allSpans[i].style.right = "0";
-  allSpans[i].style.bottom = "0";
-}
